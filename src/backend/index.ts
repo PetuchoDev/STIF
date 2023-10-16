@@ -57,7 +57,7 @@ export default Canister({
         const transactionID = newTransactionID()
         //guarda los datos recibidos de la transaccion haciendo uso de el record definido anteriormente
         const transaction : typeof Transaction = {
-            concept,
+            concept: concept.toUpperCase(),
             amount,
             date,
             whoMadeIt: ic.caller(),
