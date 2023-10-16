@@ -1,0 +1,4 @@
+service: () -> {
+    sendTransactionData: (text, text, text, vec nat8) -> (record {doc:vec nat8; concept:text; whoMadeIt:principal; date:text; amount:text});
+    showTransactions: () -> (vec record {doc:vec nat8; concept:text; whoMadeIt:principal; date:text; amount:text}) query;
+}

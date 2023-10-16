@@ -1,0 +1,24 @@
+{
+    "scripts": {
+        "dfx_install": "DFX_VERSION=0.15.0 sh -ci \"$(curl -fsSL https://sdk.dfinity.org/install.sh)\"",
+        "replica_start": "dfx start --background",
+        "replica_stop": "dfx stop",
+        "canister_deploy_local": "dfx deploy STIF2",
+        "canister_deploy_mainnet": "dfx deploy --network ic STIF2",
+        "canister_uninstall": "dfx canister uninstall-code STIF2",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "@dfinity/agent": "^0.19.3",
+        "azle": "0.18.3",
+        "vite": "^4.4.11"
+    },
+    "name": "stif",
+    "version": "0.2.0",
+    "author": "PetuchoDev",
+    "devDependencies": {
+        "@dfinity/auth-client": "^0.19.3",
+        "@dfinity/identity": "^0.19.3",
+        "webpack": "^5.89.0"
+    }
+}

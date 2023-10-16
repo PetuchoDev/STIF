@@ -1,0 +1,32 @@
+{
+    "canisters": {
+        "STIF2": {
+            "type": "custom",
+            "main": "src/backend/index.ts",
+            "candid": "src/backend/index.did",
+            "build": "npx azle STIF2",
+            "wasm": ".azle/STIF2/STIF2.wasm",
+            "gzip": true
+        },
+        "internet_identity": {
+            "type": "custom",
+            "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+            "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz",
+            "remote": {
+              "id": {
+                "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+              }
+            },
+            "frontend": {}
+        },
+        "STIFUI": {
+          "dependencies": ["STIF2", "internet_identity"],
+          "frontend": {
+            "entrypoint": "dist/index.html"
+          },
+          "source": ["dist/"],
+          "type": "assets"
+        }
+    }
+}
+

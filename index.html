@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>STIF</title>
+    <link rel="icon" href="./src/frontend/assets/favicon.ico" />
+    <link type="text/css" rel="stylesheet" href="./src/frontend/src/index.css" />
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h1>STIF</h1>
+        <img src="./src/frontend/assets/STIF.png" alt="STIF Icon">
+        <form>
+          <button id="login">Login!</button>
+        </form>
+      </nav>
+      <section id="homepage">
+        <form action="src/backend/index.ts/submitTransactionForm" id="submitTransactionForm">
+          <label for="concept">
+            <p>Concept</p>
+          </label>
+          <input type="text" name="concept" id="concept">
+          <label for="amount">
+            <p>Amount</p>
+          </label>
+          <input type="text" name="amount" id="amount">
+          <label for="date">
+            <p>Date</p>
+          </label>
+          <input type="date" name="date" id="date">
+          <button type="submit">Submit data!</button>
+        </form>
+      </section>
+    </main>
+    <script src="./src/frontend/src/index.js" type="module" ></script>
+  </body>
+</html>
